@@ -58,6 +58,10 @@ h2 {
     font-size: calc(1.3 * var(--p));
 }
 
+img[role="button"] {
+    cursor: pointer;
+}
+
 header {
     background-image: url(/images/hero-img.png);
     background-repeat: no-repeat;
