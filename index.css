@@ -58,6 +58,7 @@ h2 {
     font-size: calc(1.3 * var(--p));
 }
 
+button,
 img[role="button"] {
     cursor: pointer;
 }
