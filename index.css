@@ -59,6 +59,7 @@ h2 {
 }
 
 button,
+input[type="submit"],
 img[role="button"] {
     cursor: pointer;
 }
