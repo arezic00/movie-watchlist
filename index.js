@@ -1,6 +1,6 @@
 import { movieToHtml, getWatchlist, setWatchlist, removeMovie } from "/util.js";
 const API_KEY = '442bc09'
-const BASE_URL = 'http://www.omdbapi.com/'
+const BASE_URL = 'https://www.omdbapi.com/'
 const searchForm = document.getElementById('search-form')
 const startExploring = document.getElementById('start-exploring')
 const noMoviesFound = document.getElementById('no-movies-found')
