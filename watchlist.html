@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Watchlist</title>
+
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>My watchlist</h1>
+            <a href="/index.html">Search for movies</a>
+        </div>
+    </header>
+    <main>
+        <div class="inner">
+            <ul id="search-results" class="movie-list"></ul>
+        </div>
+        <div id="empty-watchlist" class="empty-watchlist">
+            <p>Your watchlist is looking a little empty...</p>
+            <a href="/index.html">
+                <img src="/images/add-icon.svg" alt="">
+                <p>Let's add some movies!</p>
+            </a>
+        </div>
+    </main>
+    <script type="module" src="watchlist.js"></script>
+</body>
+
+</html>

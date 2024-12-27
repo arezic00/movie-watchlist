@@ -1,0 +1,250 @@
+/* Global variables */
+:root {
+    --background-color: #121212;
+    --search-form-color: #2e2e2f;
+    --button-color: #4b4b4b;
+    --placeholder-color: #a5a5a5;
+    --text-color: #787878;
+    --max-content-width: 800px;
+    --section-inline-padding: clamp(1.25rem, 4.167vw + 0.417rem, 2.5rem);
+    --section-block-padding: calc(2 * var(--section-inline-padding));
+    --hero-min-height: clamp(15.625rem, 31.25vw + 9.375rem, 25rem);
+    --border-radius: 6px;
+    --button-inline-padding: 2.25rem;
+    --p: clamp(0.875rem, 0.833vw + 0.708rem, 1.125rem);
+}
+
+/* Global styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: 'Inter';
+    color: white;
+}
+
+header,
+main {
+    padding: var(--section-block-padding) var(--section-inline-padding);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+p,
+a {
+    font-size: var(--p);
+}
+
+h1 {
+    font-size: calc(3 * var(--p));
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: calc(1.3 * var(--p));
+}
+
+header {
+    background-image: url(/images/hero-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: var(--hero-min-height);
+    display: flex;
+}
+
+input {
+    font-family: inherit;
+    color: var(--placeholder-color);
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+}
+
+header>.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.inner {
+    max-width: var(--max-content-width);
+    margin-inline: auto;
+}
+
+main>.inner {
+    position: relative;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--search-form-color);
+    border-radius: var(--border-radius);
+    padding-left: 1rem;
+    position: absolute;
+    top: calc(-1 * var(--section-block-padding));
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.search-form>* {
+    border: none;
+}
+
+.search-form>input[type="search"] {
+    background-color: transparent;
+    flex: 1;
+    min-width: 50px;
+}
+
+.search-form>input[type="submit"] {
+    background-color: var(--button-color);
+    color: inherit;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding-inline: var(--button-inline-padding);
+    padding-block: calc(var(--button-inline-padding) * 0.4);
+}
+
+
+main {
+    min-height: calc(100vh - var(--hero-min-height));
+    position: relative;
+}
+
+.no-movies-found,
+.start-exploring,
+.empty-watchlist {
+    font-weight: bold;
+    font-size: 1.125rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start-exploring,
+.empty-watchlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-movies-found,
+.empty-watchlist {
+    color: var(--text-color);
+}
+
+.start-exploring {
+    color: var(--search-form-color);
+}
+
+.no-movies-found {
+    display: none;
+}
+
+.start-exploring>p {
+    margin-top: 0.5rem;
+}
+
+.movie-list {
+    list-style-type: none;
+}
+
+.movie-item {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap: 20px;
+    padding-block: 1.25rem;
+    border-bottom: var(--search-form-color) 1px solid;
+}
+
+.movie-item__img {
+    width: 100%;
+}
+
+.movie-item__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.movie-item__title {
+    font-weight: 500;
+}
+
+.rating,
+.watchlist-btn {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.movie-item__plot {
+    color: var(--placeholder-color);
+}
+
+.movie-item__info>div {
+    display: flex;
+    align-items: center;
+}
+
+.movie-item__info-1 {
+    gap: 0.5rem;
+}
+
+.movie-item__info-2 {
+    gap: 1rem;
+}
+
+.empty-watchlist {
+    row-gap: 1rem;
+}
+
+.empty-watchlist>a {
+    display: flex;
+    color: white;
+    font-size: .875rem;
+    column-gap: 0.5rem;
+    text-decoration: none;
+}
+
+@media (max-width: 550px) {
+
+    .movie-item {
+        grid-template-columns: 1fr;
+        padding-block: 3rem;
+    }
+
+    .movie-item:first-child {
+        padding-top: 0;
+    }
+
+    .movie-item__info {
+        row-gap: 1rem;
+    }
+}

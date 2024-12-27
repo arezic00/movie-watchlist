@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Watchlist</title>
+
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>Find your film</h1>
+            <a href="/watchlist.html">My watchlist</a>
+        </div>
+    </header>
+    <main>
+        <div class="inner">
+            <form id="search-form" class="search-form">
+                <img src="/images/search-icon.svg" alt="">
+                <input type="search" name="title" placeholder="Blade Runner">
+                <input type="submit" value="Search">
+            </form>
+            <ul id="search-results" class="movie-list">
+            </ul>
+        </div>
+        <div id="start-exploring" class="start-exploring">
+            <img src="/images/movie - con.svg" alt="">
+            <p>Start exploring</p>
+        </div>
+        <p id="no-movies-found" class="no-movies-found">
+            Unable to find what you're looking for. Please try another search.
+        </p>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
